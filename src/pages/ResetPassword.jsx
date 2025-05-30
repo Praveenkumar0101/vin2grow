@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // ✅ import useNavigate
 
 const ResetPassword = () => {
   const { token } = useParams();
+  const navigate = useNavigate(); // ✅ initialize the hook
+
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
   const [message, setMessage] = useState('');
@@ -22,6 +24,12 @@ const ResetPassword = () => {
       });
       setMessage(res.data.message);
       setError('');
+
+      // ✅ Navigate to login after a short delay
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000); // optional delay to show the success message
+
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong');
     }

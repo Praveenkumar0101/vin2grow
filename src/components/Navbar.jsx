@@ -14,47 +14,52 @@ const Navbar = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-700 text-white shadow-lg">
+    <nav className="bg-fuchsia-500 text-black shadow-lg ">
       <div className="max-w-7xl mx-auto h-17 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
                <div className="flex-shrink-0 mr-4">
             <img 
-              src="../../public/build your vision - V2W logo(2)_20250520_224214_0000.png" 
+              src="../../public/vin2grow-removebg-preview.png" 
               alt="Vin2Grow Logo" 
-              className="h-20 w-20"
+              className="h-25 w-25 ml-2 mt-2"
             />
             </div>
-              <h1 className="text-2xl font-bold">Vin2Grow</h1>
+              <h1 className="text-2xl font-bold ml-10">Vin2Grow</h1>
             </div>
+
+  
+
+
+
             <div className="hidden md:block ml-10">
               <div className="flex space-x-4">
                 <a 
                   href="#" 
                   onClick={() => setCurrentPage('home')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'home' ? 'bg-purple-800' : 'hover:bg-purple-600'}`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'home' ? 'bg-white' : 'hover:bg-white'}`}
                 >
                   Home
                 </a>
                 <a 
                   href="#" 
                   onClick={() => scrollToProducts('products')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'products' ? 'bg-purple-800' : 'hover:bg-purple-600'}`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'products' ? 'bg-white' : 'hover:bg-white'}`}
                 >
                   Products
                 </a>
                 <a 
                   href="#" 
                   onClick={() => setCurrentPage('about')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'about' ? 'bg-purple-800' : 'hover:bg-purple-600'}`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'about' ? 'bg-white' : 'hover:bg-white'}`}
                 >
                   About
                 </a>
                 <a 
                   href="#" 
                   onClick={() => setCurrentPage('contact')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'contact' ? 'bg-purple-800' : 'hover:bg-purple-600'}`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === 'contact' ? 'bg-white' : 'hover:bg-white'}`}
                 >
                   Contact
                 </a>
@@ -66,7 +71,7 @@ const Navbar = ({
               <input
                 type="text"
                 placeholder="Search products..."
-                className="rounded-full pl-10 pr-4 py-2 bg-purple-600 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-white"
+                className="rounded-full pl-10 pr-4 py-2 bg-white text-black placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-white"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -74,7 +79,7 @@ const Navbar = ({
             </div>
             <button 
               onClick={() => setShowCart(true)} 
-              className="ml-4 relative p-1 rounded-full hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-white"
+              className="ml-4 relative p-2 rounded-full hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-white"
             >
               <ShoppingCart className="h-6 w-6" />
               {cartItems.length > 0 && (

@@ -47,7 +47,7 @@ const Home = ({
                 Welcome to Vin2Grow
               </h2>
               <p className="mt-3 text-xl">
-                Your destination for amazing products at incredible prices.
+              Where convenience meets quality - shop smarter, live better.
               </p>
               <div className="mt-8">
                 <button 
